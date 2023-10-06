@@ -69,10 +69,7 @@ func main() {
 		port = "4301"
 	}
 	logrus.Infof("Listening on port %s", port)
-	err := e.Start(":" + port)
-	if err != nil {
-		return
-	}
+	logrus.Error(e.Start(":" + port))
 }
 
 var letterRunes = []rune("abcdefghijklmnopqrstuvwxyz")
