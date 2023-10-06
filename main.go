@@ -45,6 +45,9 @@ func main() {
 
 		count := make(map[string]int)
 		for _, dir := range directories {
+			if !dir.IsDir() {
+				continue
+			}
 			files, err := os.ReadDir(filepath.Join("uploads", dir.Name()))
 			if err != nil {
 				return err
