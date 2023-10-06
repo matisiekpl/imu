@@ -14,6 +14,7 @@ import (
 
 func main() {
 	e := echo.New()
+	e.Debug = true
 
 	e.POST("/submit/:id", func(c echo.Context) error {
 		id := c.Param("id")
