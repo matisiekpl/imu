@@ -1,4 +1,4 @@
-module imu-grabber
+module github.com/matisiekpl/imu
 
 go 1.21
 
